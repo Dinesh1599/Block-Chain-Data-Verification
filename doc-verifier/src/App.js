@@ -4,70 +4,8 @@ import { QRCodeCanvas } from "qrcode.react";
 import SHA256 from "crypto-js/sha256";
 import { Buffer } from "buffer";
 
-const CONTRACT_ADDRESS = "0x5FD6eB55D12E759a21C09eF703fe0CBa1DC9d88D"; // <-- Replace this
-const ABI = [
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"name": "documents",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "docHash",
-				"type": "string"
-			},
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "timestamp",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "docHash",
-				"type": "string"
-			}
-		],
-		"name": "registerDocument",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "docHash",
-				"type": "string"
-			}
-		],
-		"name": "verifyDocument",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
-];
+const CONTRACT_ADDRESS = "import ABI address here"; 
+const ABI = ["input ABI here"];
 
 function App() {
   const [account, setAccount] = useState("");
@@ -86,7 +24,7 @@ function App() {
         console.error("User rejected the connection:", error);
       }
     } else {
-      alert("Please install MetaMask!");
+      alert("Please install MetaMask");
     }
   };
 
